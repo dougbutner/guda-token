@@ -13,8 +13,8 @@ class [[eosio::contract]] newvest : public eosio::contract {
       ACTION create( const eosio::name&   issuer,
                      const eosio::asset&  maximum_supply);
 
-      // --- Issue tokens to an account --- //
-      ACTION issue( const eosio::name& to, const eosio::asset& quantity, const std::string& memo );
+      // --- Mint tokens to an account --- //
+      ACTION mint( const eosio::name& to, const eosio::asset& quantity, const std::string& memo );
 
       // --- Burn tokens from an account --- //
       ACTION burn( const eosio::name& burner, const eosio::asset& quantity, const std::string& memo );

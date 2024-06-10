@@ -25,8 +25,8 @@ void newvest::create( const name& issuer, const asset& maximum_supply ) {
     });
 }
 
-// --- Issue tokens to an account --- //
-void newvest::issue( const name& to, const asset& quantity, const string& memo ) {
+// --- Mint tokens to an account --- //
+void newvest::mint( const name& to, const asset& quantity, const string& memo ) {
     auto sym = quantity.symbol;
     check( sym.is_valid(), "⚡️ Invalid symbol name" );
     check( memo.size() <= 256, "⚡️ Memo is too long" );
