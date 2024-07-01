@@ -44,14 +44,14 @@ class [[eosio::contract]] newvest : public eosio::contract {
       // --- Get the supply of a token --- //
       static eosio::asset get_supply( const eosio::name& token_contract_account, const eosio::symbol_code& sym_code ) {
          stats statstable( token_contract_account, sym_code.raw() );
-         const auto& st = statstable.get( sym_code.raw(), "invalid supply symbol code" );
+         const auto& st = statstable.get( sym_code.raw(), "🜛 Invalid supply symbol code" );
          return st.supply;
       }
 
       // --- Get the balance of an account --- //
       static eosio::asset get_balance( const eosio::name& token_contract_account, const eosio::name& owner, const eosio::symbol_code& sym_code ) {
          accounts accountstable( token_contract_account, owner.value );
-         const auto& ac = accountstable.get( sym_code.raw(), "no balance with specified symbol" );
+         const auto& ac = accountstable.get( sym_code.raw(), "🜛 No balance with specified symbol" );
          return ac.balance;
       }
 
